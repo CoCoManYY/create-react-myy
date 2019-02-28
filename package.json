@@ -1,0 +1,25 @@
+{
+  "name": "create-react-myy",
+  "version": "1.0.0",
+  "description": "npm package for myself to create react-app",
+  "main": "index.js",
+  "bin": {
+    "create-react-myy": "bin/creat-react-myy.js"
+  },
+  "scripts": {
+    "test": "create-react-myy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoCoManYY/create-react-myy.git"
+  },
+  "keywords": [
+    "0711"
+  ],
+  "author": "cocomanyy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CoCoManYY/create-react-myy/issues"
+  },
+  "homepage": "https://github.com/CoCoManYY/create-react-myy#readme"
+}
