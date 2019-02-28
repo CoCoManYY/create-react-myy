@@ -7,19 +7,26 @@
     "create-react-myy": "bin/creat-react-myy.js"
   },
   "scripts": {
-    "test": "create-react-myy"
+    "test": "bin/creat-react-myy.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CoCoManYY/create-react-myy.git"
   },
   "keywords": [
-    "0711"
+    "create-react-myy"
   ],
   "author": "cocomanyy",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/CoCoManYY/create-react-myy/issues"
   },
-  "homepage": "https://github.com/CoCoManYY/create-react-myy#readme"
+  "homepage": "https://github.com/CoCoManYY/create-react-myy#readme",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "commander": "^2.9.0",
+    "download-git-repo": "^1.0.0",
+    "inquirer": "^3.0.6",
+    "ora": "^1.2.0"
+  }
 }
