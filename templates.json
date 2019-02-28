@@ -1,14 +1,14 @@
 {
   "init": {
-    "place": "Hzy0913/react-template",
-    "branch": ""
+    "place": "CoCoManYY/template-react",
+    "branch": "#normal"
   },
   "complete-project": {
-    "place": "Hzy0913/react-template",
+    "place": "CoCoManYY/template-react",
     "branch": "#complete"
   },
   "simple-project": {
-    "place": "Hzy0913/react-template",
-    "branch": "#simple"
+    "place": "CoCoManYY/template-react",
+    "branch": "#master"
   }
 }
