@@ -1,8 +1,4 @@
 {
-  "init": {
-    "place": "CoCoManYY/template-react",
-    "branch": "#normal"
-  },
   "complete-project": {
     "place": "CoCoManYY/template-react",
     "branch": "#complete"
