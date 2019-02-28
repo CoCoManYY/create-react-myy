@@ -1,14 +1,19 @@
-const {prompt} = require('inquirer')
-const program = require('commander')
-const chalk = require('chalk')
-const download = require('download-git-repo')
-const ora = require('ora')
-const fs = require('fs')
-const path = require('path')
-
-const option =  program.parse(process.argv).args[0]
-const defaultName = typeof option === 'string' ? option : 'react-project'
-const tplList = require(`${__dirname}/../templates`)
+// a collection of common interactive command line user interfaces;
+const {prompt} = require('inquirer');
+// The compllete solution for node.js command-line interfaces
+const program = require('commander');
+// 命令行颜色
+const chalk = require('chalk');
+// git下载操作
+const download = require('download-git-repo');
+// 命令行加载中效果
+const ora = require('ora');
+const fs = require('fs');
+// const path = require('path');
+const option =  program.parse(process.argv).args[0];
+console.log('option',option);
+const defaultName = typeof option === 'string' ? option : 'react-project';
+const tplList = require(`${__dirname}/../templates`);
 const tplLists = Object.keys(tplList) || [];
 const question = [
     {
@@ -16,11 +21,11 @@ const question = [
         name: 'name',
         message: 'Project name',
         default: defaultName,
-        filter(val) {
-            return val.trim()
-        },
-        validate(val) {
-            const validate = (val.trim().split(" ")).length === 1
+        // filter(val) {
+        //     return val.trim()
+        // },
+        validate(val) {// 格式化
+            const validate = (val.trim().split(" ")).length === 1;
             return validate || 'Project name is not allowed to have spaces ';
         },
         transformer(val) {
@@ -61,7 +66,7 @@ const question = [
             return val;
         }
     }
-]
+];
 module.exports = prompt(question).then(({name, template, description, author}) => {
     const projectName = name;
     const templateName = template;
@@ -92,15 +97,15 @@ module.exports = prompt(question).then(({name, template, description, author}) =
                     return;
                 } else {
                     spinner.stop();
-                    console.log(chalk.green('project init successfully!'))
+                    console.log(chalk.green('project init successfully!'));
                     console.log(`
-            ${chalk.bgWhite.black('   Run Application  ')}
-            ${chalk.yellow(`cd ${name}`)}
-            ${chalk.yellow('npm install')}
-            ${chalk.yellow('npm start')}
-          `);
+                    ${chalk.bgWhite.black('   Run Application  ')}
+                    ${chalk.yellow(`cd ${name}`)}
+                    ${chalk.yellow('npm install')}
+                    ${chalk.yellow('npm start')}
+          `         );
                 }
             });
         });
     })
-})
+});

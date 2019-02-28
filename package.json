@@ -4,10 +4,10 @@
   "description": "npm package for myself to create react-app",
   "main": "index.js",
   "bin": {
-    "create-react-myy": "bin/creat-react-myy.js"
+    "create-react-myy": "bin/react-cli.js"
   },
   "scripts": {
-    "test": "bin/creat-react-myy.js"
+    "test": "node bin/react-cli.js"
   },
   "repository": {
     "type": "git",
